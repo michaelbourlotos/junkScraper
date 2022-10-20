@@ -1,0 +1,14 @@
+{
+  "name": "junk-scraper",
+  "version": "1.0.0",
+  "description": "Searches junkyard website inventory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Bourlotos",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^19.0.0"
+  }
+}
