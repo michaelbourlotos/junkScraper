@@ -58,11 +58,22 @@ const model = "ELEMENT";
     //writes results array to results.txt
     if (fsSync.existsSync("./results.txt")){
         await fs.writeFile("new-results.txt", results.join("\r\n"));
-        console.log("new results");
     } else {
         await fs.writeFile("results.txt", results.join("\r\n"));
     }
     
+    if (fsSync.existsSync("./new-results.txt")){
+        let oldResults = fsSync.readFileSync('results.txt', 'utf-8');
+        let newResults = fsSync.readFileSync('new-results.txt', 'utf-8');
+        if (oldResults === newResults){
+            console.log("no new results");
+        } else {
+            console.log("new results!");
+        }
+    }
+
+
+
 
     console.log('sup');
     await browser.close();
